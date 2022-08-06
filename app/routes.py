@@ -61,10 +61,8 @@ def update_inventory(inv_id):
     request_body = request.get_json()
     # # TODO Can this be cleaned up a bit more? 
     # # Also does not work if only one updated key:value pair is input. As it's written now all attributes must be included in request. 
-    
     # for item in request_body: 
     #     inventory.item = request_body[item]
-    
     inventory.inv_date = request_body["inv_date"]
     inventory.family = request_body["family"]
     inventory.facility = request_body["facility"]
