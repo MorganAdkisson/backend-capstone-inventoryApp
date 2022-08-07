@@ -17,7 +17,7 @@ class Inventory(db.Model):
 
     def to_dict(self): 
         return {
-        "inv_date": self.inv_date,
+        "inv_date": self.inv_date.strftime("%m/%d/%Y"),
         "family": self.family,
         "facility": self.facility,
         "tank": self.tank,
